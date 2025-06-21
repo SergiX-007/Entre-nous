@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Entre nous</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Polices personnalisées -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: url('https://images.pexels.com/photos/7744160/pexels-photo-7744160.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Open Sans', sans-serif;
+      color: white;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      backdrop-filter: blur(3px);
+    }
+
+    .poem-box {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 700px;
+      width: 90%;
+      box-shadow: 0 0 30px rgba(255, 0, 80, 0.3);
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: red;
+      margin-bottom: 30px;
+    }
+
+    .line {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+
+    .line.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .heart-icon {
+      position: absolute;
+      bottom: 20px;
+      font-size: 2.5rem;
+      color: red;
+      animation: beat 1.3s infinite;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Chad_Crouch/Motion_Chad_Crouch_2019/Chad_Crouch_-_Midnight_Dream.mp3" type="audio/mp3">
+  </audio>
+
+  <div class="poem-box">
+    <h1>Entre nous ...</h1>
+    <div class="line">Je sais qu’on n’a jamais mis d’étiquettes,</div>
+    <div class="line">Juste deux âmes qui se croisent, discrètes.</div>
+    <div class="line">Mais même sans promesse ou grand serment,</div>
+    <div class="line">J’tenais à toi, sincèrement.</div>
+
+    <div class="line">Parfois, j’me suis fait lointain,</div>
+    <div class="line">Pris par le temps, un peu moins humain.</div>
+    <div class="line">Si j’t’ai blessée sans le vouloir,</div>
+    <div class="line">J’te demande pardon, à cœur ouvert ce soir.</div>
+
+    <div class="line">Je voudrais qu’on garde ce lien sans détour,</div>
+    <div class="line">Notre complicité, sans flou, ni détour.</div>
+    <div class="line">Pas besoin d’un grand discours,</div>
+    <div class="line">Juste du respect même si y a pas d’amour.</div>
+
+    <div class="line">Tu comptes, même en silence ou de loin,</div>
+    <div class="line">Et j’respecte tout chemin que tu choisis demain.</div>
+  </div>
+
+  <div class="heart-icon">
+    <i class="bi bi-heart-fill"></i>
+  </div>
+
+  <script>
+    const lines = document.querySelectorAll('.line');
+    lines.forEach((line, index) => {
+      setTimeout(() => {
+        line.classList.add('visible');
+      }, 500 + index * 600);
+    });
+  </script>
+  
+    
+</body>
+</html>
+
+
+</body>
+</html>
