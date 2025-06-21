@@ -103,15 +103,6 @@
       transform: translateY(0);
     }
 
-    .heart-icon {
-      position: absolute;
-      bottom: 1em;
-      font-size: clamp(1.5rem, 4vw, 2.5rem);
-      color: red;
-      animation: beat 3s infinite;
-      user-select: none;
-      pointer-events: none;
-    }
 
     @keyframes beat {
       0%, 100% { transform: scale(1); }
@@ -146,10 +137,6 @@
 
     <div class="line">Tu comptes, même en silence ou de loin,</div>
     <div class="line">Et j’respecte tout chemin que tu choisis demain.</div>
-  </div>
-
-  <div class="heart-icon" aria-hidden="true">
-    <i class="bi bi-heart-fill"></i>
   </div>
 
   <audio id="audio" loop>
